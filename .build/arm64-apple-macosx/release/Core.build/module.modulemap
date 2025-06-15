@@ -1,0 +1,4 @@
+module Core {
+    header "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/Core-Swift.h"
+    requires objc
+}

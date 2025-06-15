@@ -1,0 +1,153 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "App-arm64-apple-macosx15.0-release.module": ["<App-arm64-apple-macosx15.0-release.module>"]
+  "ClaudeTracker-arm64-apple-macosx15.0-release.exe": ["<ClaudeTracker-arm64-apple-macosx15.0-release.exe>"]
+  "ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.module": ["<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.module>"]
+  "ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.test": ["<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.test>"]
+  "Core-arm64-apple-macosx15.0-release.module": ["<Core-arm64-apple-macosx15.0-release.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "SessionStoreTests-arm64-apple-macosx15.0-release.module": ["<SessionStoreTests-arm64-apple-macosx15.0-release.module>"]
+  "main": ["<App-arm64-apple-macosx15.0-release.module>","<ClaudeTracker-arm64-apple-macosx15.0-release.exe>","<Core-arm64-apple-macosx15.0-release.module>"]
+  "test": ["<App-arm64-apple-macosx15.0-release.module>","<ClaudeTracker-arm64-apple-macosx15.0-release.exe>","<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.test>","<Core-arm64-apple-macosx15.0-release.module>","<SessionStoreTests-arm64-apple-macosx15.0-release.module>"]
+default: "main"
+nodes:
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/ClaudeTrackerApp.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/MenuBarContent.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/ClaudeTrackerApp.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/MenuBarContent.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/DataModels.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/SessionStore.swift.o"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker.product/Objects.LinkFileList"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.derived/runner.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: []
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.derived/runner.swift"]
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/runner.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/DataModels.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/SessionStore.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/SessionStoreTests.swift.o"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.product/Objects.LinkFileList"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/DataModels.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/SessionStore.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/SessionStoreTests.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+
+  "<App-arm64-apple-macosx15.0-release.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/ClaudeTrackerApp.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/MenuBarContent.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/App.swiftmodule"]
+    outputs: ["<App-arm64-apple-macosx15.0-release.module>"]
+
+  "<ClaudeTracker-arm64-apple-macosx15.0-release.exe>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker"]
+    outputs: ["<ClaudeTracker-arm64-apple-macosx15.0-release.exe>"]
+
+  "<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/runner.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/ClaudeTrackerPackageTests.swiftmodule"]
+    outputs: ["<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.module>"]
+
+  "<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.test>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.xctest/Contents/MacOS/ClaudeTrackerPackageTests"]
+    outputs: ["<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.test>"]
+
+  "<Core-arm64-apple-macosx15.0-release.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/DataModels.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/SessionStore.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/Core.swiftmodule"]
+    outputs: ["<Core-arm64-apple-macosx15.0-release.module>"]
+
+  "<SessionStoreTests-arm64-apple-macosx15.0-release.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/SessionStoreTests.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/SessionStoreTests.swiftmodule"]
+    outputs: ["<SessionStoreTests-arm64-apple-macosx15.0-release.module>"]
+
+  "C.App-arm64-apple-macosx15.0-release.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/ClaudeTrackerApp.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/MenuBarContent.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/Core.swiftmodule","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/ClaudeTrackerApp.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/MenuBarContent.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/App.swiftmodule"]
+    description: "Compiling Swift Module 'App' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","App","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/App.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/output-file-map.json","-whole-module-optimization","-num-threads","12","-c","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx13.0","-O","-j12","-DSWIFT_PACKAGE","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","App_main","-color-diagnostics","-swift-version","5","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "C.ClaudeTracker-arm64-apple-macosx15.0-release.exe":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/ClaudeTrackerApp.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/MenuBarContent.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/DataModels.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/SessionStore.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker.product/Objects.LinkFileList"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker"]
+    description: "Linking ./.build/arm64-apple-macosx/release/ClaudeTracker"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release","-o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker","-module-name","ClaudeTracker","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-dead_strip","-Xlinker","-alias","-Xlinker","_App_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTracker.product/Objects.LinkFileList","-target","arm64-apple-macosx13.0","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.derived/runner.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/SessionStoreTests.swiftmodule","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/runner.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/ClaudeTrackerPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'ClaudeTrackerPackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","ClaudeTrackerPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/ClaudeTrackerPackageTests.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/output-file-map.json","-parse-as-library","-whole-module-optimization","-num-threads","12","-c","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx13.0","-O","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j12","-DSWIFT_PACKAGE","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/ClaudeTrackerPackageTests-Swift.h","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "C.ClaudeTrackerPackageTests-arm64-apple-macosx15.0-release.test":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/runner.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/DataModels.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/SessionStore.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/SessionStoreTests.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.xctest/Contents/MacOS/ClaudeTrackerPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.xctest/Contents/MacOS/ClaudeTrackerPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release","-o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.xctest/Contents/MacOS/ClaudeTrackerPackageTests","-module-name","ClaudeTrackerPackageTests","-Xlinker","-no_warn_duplicate_libraries","-Xlinker","-bundle","-Xlinker","-dead_strip","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.product/Objects.LinkFileList","-target","arm64-apple-macosx14.0","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.Core-arm64-apple-macosx15.0-release.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/DataModels.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/SessionStore.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/DataModels.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/SessionStore.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/Core.swiftmodule"]
+    description: "Compiling Swift Module 'Core' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Core","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/Core.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/output-file-map.json","-parse-as-library","-whole-module-optimization","-num-threads","12","-c","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx13.0","-O","-j12","-DSWIFT_PACKAGE","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Core.build/Core-Swift.h","-color-diagnostics","-swift-version","5","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "C.SessionStoreTests-arm64-apple-macosx15.0-release.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/SessionStoreTests.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/Core.swiftmodule","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/SessionStoreTests.swift.o","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/SessionStoreTests.swiftmodule"]
+    description: "Compiling Swift Module 'SessionStoreTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","SessionStoreTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules/SessionStoreTests.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/output-file-map.json","-parse-as-library","-whole-module-optimization","-num-threads","12","-c","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/SessionStoreTests.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx14.0","-index-store-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/index/store","-O","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j12","-DSWIFT_PACKAGE","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Package.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

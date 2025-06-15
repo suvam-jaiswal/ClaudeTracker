@@ -1,0 +1,7 @@
+version: "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)"
+options: "4a36768cedd24700b201f7d13d0d5ec2caa9e202756d803b264bf9e30f7cd8d0"
+build_start_time: [1749946112, 648055000]
+build_end_time: [1749946114, 765176000]
+inputs:
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/ClaudeTrackerApp.swift": [1749945712, 7036406]
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/MenuBarContent.swift": [1749945951, 726277995]

@@ -1,0 +1,7 @@
+version: "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)"
+options: "ba17c1777c00b44e7918153a3893e1bcb1b8585ec9c1d903ff06e42bf6997595"
+build_start_time: [1749946110, 436828000]
+build_end_time: [1749946112, 551055000]
+inputs:
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/DataModels.swift": [1749945916, 708376048]
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/SessionStore.swift": [1749946048, 937538779]

@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/master.swiftdeps"
+  },
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/SessionStoreTests.swift": {
+    "dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/SessionStoreTests.d",
+    "object": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/SessionStoreTests.swift.o",
+    "swiftmodule": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/SessionStoreTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/SessionStoreTests.swiftdeps"
+  }
+}

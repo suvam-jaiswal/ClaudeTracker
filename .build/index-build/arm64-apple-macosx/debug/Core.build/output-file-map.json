@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/master.swiftdeps"
+  },
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/DataModels.swift": {
+    "dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/DataModels.d",
+    "object": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/DataModels.swift.o",
+    "swiftmodule": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/DataModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/DataModels.swiftdeps"
+  },
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/SessionStore.swift": {
+    "dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/SessionStore.d",
+    "object": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/SessionStore.swift.o",
+    "swiftmodule": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/SessionStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/SessionStore.swiftdeps"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "": {
+    "dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/App.d",
+    "object": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/App.o",
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/master.swiftdeps"
+  },
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/ClaudeTrackerApp.swift": {
+    "object": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/ClaudeTrackerApp.swift.o",
+    "swiftmodule": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/ClaudeTrackerApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/ClaudeTrackerApp.swiftdeps"
+  },
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/MenuBarContent.swift": {
+    "object": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/MenuBarContent.swift.o",
+    "swiftmodule": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/MenuBarContent~partial.swiftmodule",
+    "swift-dependencies": "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/App.build/MenuBarContent.swiftdeps"
+  }
+}

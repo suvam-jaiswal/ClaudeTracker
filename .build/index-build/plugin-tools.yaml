@@ -1,0 +1,110 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "App-arm64-apple-macosx15.0-debug.module": ["<App-arm64-apple-macosx15.0-debug.module>"]
+  "ClaudeTrackerPackageTests-arm64-apple-macosx15.0-debug.module": ["<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-debug.module>"]
+  "Core-arm64-apple-macosx15.0-debug.module": ["<Core-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "SessionStoreTests-arm64-apple-macosx15.0-debug.module": ["<SessionStoreTests-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<App-arm64-apple-macosx15.0-debug.module>","<Core-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<App-arm64-apple-macosx15.0-debug.module>","<Core-arm64-apple-macosx15.0-debug.module>","<SessionStoreTests-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/App.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/ClaudeTrackerApp.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/MenuBarContent.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/App.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/App.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.derived/runner.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/DataModels.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/SessionStore.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/SessionStoreTests.swift"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/sources"]
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/sources"
+
+  "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<App-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/App.swiftmodule"]
+    outputs: ["<App-arm64-apple-macosx15.0-debug.module>"]
+
+  "<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/ClaudeTrackerPackageTests.swiftmodule"]
+    outputs: ["<ClaudeTrackerPackageTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "<Core-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule"]
+    outputs: ["<Core-arm64-apple-macosx15.0-debug.module>"]
+
+  "<SessionStoreTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/SessionStoreTests.swiftmodule"]
+    outputs: ["<SessionStoreTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.App-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/ClaudeTrackerApp.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/MenuBarContent.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/App.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/App.swiftmodule"]
+    description: "Compiling Swift Module 'App' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","App","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/App.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/App.build/output-file-map.json","-incremental","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/App.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","App_main","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "C.ClaudeTrackerPackageTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.derived/runner.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/SessionStoreTests.swiftmodule","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/ClaudeTrackerPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'ClaudeTrackerPackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","ClaudeTrackerPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/ClaudeTrackerPackageTests.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.build/output-file-map.json","-parse-as-library","-incremental","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ClaudeTrackerPackageTests.build/ClaudeTrackerPackageTests-Swift.h","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "C.Core-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/DataModels.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/SessionStore.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule"]
+    description: "Compiling Swift Module 'Core' (2 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Core","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/output-file-map.json","-parse-as-library","-incremental","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Core.build/Core-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "C.SessionStoreTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/SessionStoreTests.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/Core.swiftmodule","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/sources"]
+    outputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/SessionStoreTests.swiftmodule"]
+    description: "Compiling Swift Module 'SessionStoreTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","SessionStoreTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules/SessionStoreTests.swiftmodule","-output-file-map","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/output-file-map.json","-parse-as-library","-incremental","@/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/SessionStoreTests.build/sources","-I","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-enable-batch-mode","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j12","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","claudetracker"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/App/","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Sources/Core/","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Tests/","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Package.swift","/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

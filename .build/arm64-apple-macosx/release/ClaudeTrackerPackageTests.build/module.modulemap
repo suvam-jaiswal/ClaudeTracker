@@ -1,0 +1,4 @@
+module ClaudeTrackerPackageTests {
+    header "/Users/suvam-jaiswal/Desktop/Xcode Apps/ClaudeTracker/.build/arm64-apple-macosx/release/ClaudeTrackerPackageTests.build/ClaudeTrackerPackageTests-Swift.h"
+    requires objc
+}

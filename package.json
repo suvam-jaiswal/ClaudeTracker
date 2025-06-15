@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "preview-swift": "./scripts/preview-swift.sh",
+        "watch": "./scripts/watch.sh",
+        "test": "swift test"
+    }
+}
